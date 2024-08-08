@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import FlagsContainer from './components/FlagsContainer';
+import StopWatch from './components/StopWatch';
 function App() {
   return (
     <div>
-      <FlagsContainer/>
+      <StopWatch/>
     </div>
   );
 }
