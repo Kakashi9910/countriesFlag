@@ -25,7 +25,7 @@ const Item = styled(Paper)(({ theme }) => ({
             console.log(response.data)
             setFlags(response.data)
             } catch (error) {
-                console.log('Error',error)
+                console.error('Error',error)
                 return null
             }
         }
