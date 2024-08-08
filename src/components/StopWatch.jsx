@@ -20,6 +20,7 @@ const DisplayName=()=>{
     }
     return (
    <form onSubmit={(event)=>handleSubmit(event)}>
+    <h1>Full Name Display</h1>
     <div>
     <label htmlFor="firstName">First Name: </label>
     <input required type="text" id="firstName" value={firstName} onChange={handleChange}/>
