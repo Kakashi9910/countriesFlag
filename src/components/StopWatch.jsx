@@ -24,7 +24,7 @@ const DisplayName = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit}>
       <h1>Full Name Display</h1>
       <div>
         <label htmlFor="firstName">First Name: </label>
@@ -46,11 +46,12 @@ const DisplayName = () => {
           onChange={handleChange}
         />
       </div>
-      {submitted && (
-        <p>Full Name: {formData.firstName} {formData.lastName}</p>
-      )}
       <button type="submit">Submit</button>
+      {submitted && (
+        <p id="fullName">Full Name: {formData.firstName} {formData.lastName}</p>
+      )}
     </form>
+
   );
 };
 
