@@ -29,7 +29,7 @@ const DisplayName=()=>{
     <label htmlFor="lastName">Last Name: </label>
     <input required type="text" id="lastName" value={lastName} onChange={handleChange} />
     </div>
-    {submitted && <p>{firstName} {lastName}</p>}
+    {submitted && <p>Full Name: {firstName} {lastName}</p>}
      <button type="submit">Submit</button>
    </form>
     )
