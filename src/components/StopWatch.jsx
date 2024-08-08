@@ -1,48 +1,37 @@
 import React, { useEffect, useRef, useState } from "react"
 
 
-const StopWatch=()=>{
-    const timeRef= useRef(null)
-    const [time,setTime] = useState(0)
-    const [isTriggered,setTrigger] = useState(false)
-    useEffect(()=>{
-        if(isTriggered) {
-          timeRef.current=setInterval(()=>{
-              setTime(prev=>prev+1)
-          },1000)
-        } else {
-            clearInterval(timeRef.current)
+const DisplayName=()=>{
+    const [submitted,setSubmit] = useState(false)
+    const [firstName,setFirstName] = useState("")
+    const [lastName,setLastName] = useState("")
+    const handleSubmit=(event)=>{
+        event.preventDefault()
+        setSubmit(true)
+   }
+    
+    const handleChange=(event)=>{
+        if(event.target.id === 'firstName') {
+            setFirstName(event.target.value)
         }
-    },[isTriggered])
-
-   const FormatTime=(seconds)=> {
-       let min=''+Math.floor(seconds/60)
-       let sec=''+ seconds%60
-       if(sec<10){
-        sec='0'+sec
-       }
-       return `${min}:${sec}`
-      
-   }
-
-   const handleTrigger=()=>{
-       setTrigger(prev=>!prev)
-   }
-
-   const resetTrigger=()=>{
-    setTrigger(false)
-    setTime(0)
-   }
+        else {
+            setLastName(event.target.value)
+        }
+    }
     return (
-        <>
-        <h1>Stopwatch</h1>
-        <p>Time: {FormatTime(time)}</p>
-        <button onClick={handleTrigger}>
-            {isTriggered?'Stop':'Start'}
-        </button>
-        <button onClick={resetTrigger}>Reset</button>
-        </>
+   <form onSubmit={(event)=>handleSubmit(event)}>
+    <div>
+    <label htmlFor="firstName">First Name: </label>
+    <input required type="text" id="firstName" value={firstName} onChange={handleChange}/>
+    </div>
+    <div>
+    <label htmlFor="lastName">Last Name: </label>
+    <input required type="text" id="lastName" value={lastName} onChange={handleChange} />
+    </div>
+    {submitted && <p>{firstName} {lastName}</p>}
+     <button type="submit">Submit</button>
+   </form>
     )
 }
 
-export default StopWatch
+export default DisplayName
