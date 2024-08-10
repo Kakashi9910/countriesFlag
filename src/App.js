@@ -1,12 +1,9 @@
 import './App.css';
-import Calculator from './components/Calculator';
+import FlagsContainer from './components/FlagsContainer';
 function App() {
   return (
     <>
-      <h1 style={{textAlign:'center'}}>React Calculator</h1>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Calculator />
-      </div>
+        <FlagsContainer />
     </>
 
   );
