@@ -25,10 +25,11 @@ const DisplayName = () => {
         <input type="text" id="lastname" name="lastname" required value={lastname} onChange={(e)=>setlastname(e.target.value)}/>
     </div>
     <button type="submit">Submit</button>
-    {
+    
+</form>
+{
       fullname && <p>{fullname}</p>
     }
-</form>
        </>
 
   );
