@@ -1,10 +1,14 @@
 import './App.css';
-import Counter from './components/Counter';
+import Calculator from './components/Calculator';
 function App() {
   return (
-    <div>
-      <Counter/>
-    </div>
+    <>
+      <h1 style={{textAlign:'center'}}>React Calculator</h1>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Calculator />
+      </div>
+    </>
+
   );
 }
 
