@@ -18,9 +18,14 @@ const Calculator = () => {
 
   const handleCalculate = () => {
     try {
+      if(!input) {
+        setResult('Error')
+      } else {
       setResult(eval(input))
+      }
     } catch (error) {
-      console.log(error)
+      console.log('ERROR',error)
+      setResult('Error')
       return null
     }
   }
