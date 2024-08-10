@@ -1,9 +1,9 @@
 import './App.css';
-import DisplayName from './components/StopWatch';
+import Counter from './components/Counter';
 function App() {
   return (
     <div>
-      <DisplayName/>
+      <Counter/>
     </div>
   );
 }
