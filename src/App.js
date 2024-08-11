@@ -23,6 +23,7 @@ function App() {
       pagenateddata(response.data, 0)
     } catch (error) {
       console.error(error)
+      window.alert(`error is: ${error}`)
       settabledata([])
       pagenateddata([],0)
     }
@@ -50,12 +51,14 @@ function App() {
         </tr>
         {
          showdata.length && showdata?.map((obj)=>(
+          <tbody>
             <tr>
             <td>{obj.id}</td>
             <td>{obj.name}</td>
             <td>{obj.email}</td>
             <td>{obj.role}</td>
             </tr>
+            </tbody>
           ))
         }
     </table>
