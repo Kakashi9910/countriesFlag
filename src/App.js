@@ -23,7 +23,7 @@ function App() {
       pagenateddata(response.data, 0)
     } catch (error) {
       console.error(error)
-      window.alert(`error is: ${error}`)
+      window.alert('failed to fetch data')
       settabledata([])
       pagenateddata([],0)
     }
