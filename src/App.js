@@ -1,9 +1,9 @@
 import './App.css';
-import FlagsContainer from './components/FlagsContainer';
+import CounterApp from './components/CounterApp';
 function App() {
   return (
     <>
-        <FlagsContainer />
+        <CounterApp />
     </>
 
   );
