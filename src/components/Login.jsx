@@ -33,7 +33,7 @@ const Login=()=>{
         }))}}/>
         </div>
         <div>
-        <label htmlFor="password" >Passsword:</label>
+        <label htmlFor="password" >Password:</label>
         <input required placeholder="password" type="password" id="password" value={userDetails.password} onChange={(event)=>{setDetails(prev=>({
           ...prev,
           password:event.target.value
