@@ -1,12 +1,12 @@
 import React from 'react';
-import Login from './components/Login';
+import LocationSelect from './components/LocationSelect';
 import './App.css';
 
 function App() {
 
   return (
     <div className="App">
-      <Login/>
+      <LocationSelect/>
     </div>
   );
 }
