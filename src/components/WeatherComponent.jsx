@@ -10,13 +10,14 @@ const WeatherComponent = () => {
 
    const handleSearch=async()=>{
       try {
-      setLoaded('Loading data…')
+      setLoaded('Loading data...')
       const url=`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
       const response = await axios.get(url)
       setCityWeather(response.data)
       setLoaded('')
       } catch (error) {
-         alert('Failed to fetch weather data')
+         setCityWeather({})
+         window.alert('Failed to fetch weather data')
       }
    }
    return (
