@@ -14,8 +14,12 @@ const LocationSelect=()=>{
   const [city,setCity] = useState('')
   useEffect(()=>{
     const getAllCountries=async()=>{
-      const response = await axios.get(CoutriesUrl);
-      setCountries(response.data)
+      try {
+        const response = await axios.get(CoutriesUrl);
+        setCountries(response.data)
+      } catch(error) {
+        console.error('Error',error)
+      }
     }
     getAllCountries()
   },[])
@@ -24,10 +28,15 @@ const LocationSelect=()=>{
     console.log(event.target.value)
     setCountry(event.target.value)
     const getStates=async()=>{
-      const countryName = event.target.value
-      const stateUrl = `https://crio-location-selector.onrender.com/country=${countryName}/states`
-      const response = await axios.get(stateUrl)
-      setStates(response.data)
+      try {
+        const countryName = event.target.value
+        const stateUrl = `https://crio-location-selector.onrender.com/country=${countryName}/states`
+        const response = await axios.get(stateUrl)
+        setStates(response.data)
+      } catch (error) {
+        console.error('Error',error)
+      }
+
     }
     getStates()
   }
@@ -78,7 +87,7 @@ const LocationSelect=()=>{
       </div>
     </div>
     {country && state && city &&
-    <h2>You Selected {city}, {state}, {country}</h2>
+    <h2>You selected {city}, {state}, {country}</h2>
     }
     </>
   )
