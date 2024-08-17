@@ -1,12 +1,12 @@
 import React from 'react';
-import WeatherComponent from './components/WeatherComponent';
+import SpellCheckApp from './components/SpellCheckApp';
 import './App.css';
 
 function App() {
 
   return (
     <div className="App">
-      <WeatherComponent/>
+      <SpellCheckApp/>
     </div>
   );
 }
