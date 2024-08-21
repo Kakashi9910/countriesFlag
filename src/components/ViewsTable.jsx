@@ -50,7 +50,7 @@ const ViewsTable = () => {
 
     return (
         <>
-        <h1>Date and Views Tabl</h1>
+        <h1>Date and Views Table</h1>
         <div>
             <button onClick={sortByDate}>Sort by Date</button>
             <button onClick={sortByViews}>Sort by Views</button>
