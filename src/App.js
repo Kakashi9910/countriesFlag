@@ -1,12 +1,12 @@
 import React from 'react';
-import SpellCheckApp from './components/SpellCheckApp';
+import DictionaryApp from './components/DictionaryApp';
 import './App.css';
 
 function App() {
 
   return (
     <div className="App">
-      <SpellCheckApp/>
+      <DictionaryApp/>
     </div>
   );
 }
