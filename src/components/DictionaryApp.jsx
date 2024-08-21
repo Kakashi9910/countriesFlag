@@ -29,6 +29,7 @@ const DictionaryApp = () => {
   };
   return (
     <>
+    <h2>Dictionary App</h2>
       <input
         type="text"
         placeholder="Search for a word..."
